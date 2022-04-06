@@ -1,0 +1,19 @@
+package javaAssignments;
+
+public class MyException extends Exception{
+	MyException(String msg){
+		super(msg);
+	}
+}
+	
+	
+class MyExceptionMain{
+	public static void main(String[] args){
+		try{
+			throw new MyException("this is my exception");
+		}
+		catch(MyException e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
