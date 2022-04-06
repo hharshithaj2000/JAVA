@@ -1,0 +1,23 @@
+package javaAssignments;
+import java.util.Scanner;
+
+public class HcfLcm {
+	public static void main(String[] args){
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter first number:");
+			int a=sc.nextInt();
+			System.out.println("Enter second number:");
+			int b=sc.nextInt();
+			sc.close();
+			int i;
+			int max=(a>b)?a:b;
+			for(i=max;i<=a*b;i=max+i){
+				if(i%a==0 && i%b==0){
+					break;
+				}
+			}
+			int hcf=(a*b)/i;
+			System.out.println("LCM: "+i);
+			System.out.println("HCF: "+hcf);
+		}
+	}
