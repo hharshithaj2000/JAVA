@@ -1,0 +1,47 @@
+package javaAssignments;
+
+public class AccountTest1 {
+	int accno;
+	String accname;
+	int accbalance;
+	AccountTest1(int accno,String accname){
+		this.accno=accno;
+		this.accname=accname;
+	}
+	void deposit(int rs){
+		this.accbalance=accbalance+rs;
+		System.out.println("Amount deposited in account is: "+rs);
+		
+	}
+	void withdraw(int rs){
+		this.accbalance=accbalance-rs;
+		System.out.println("Amount withdrawn from account is: "+rs);
+		
+	}
+	void display(){
+		System.out.println("Name of account is: "+this.accname);
+		System.out.println("Account no is: "+this.accno);
+		System.out.println("Remaining amount in account is: "+this.accbalance);
+		
+		
+	}
+}
+
+
+
+class AccountTest1Main{
+	public static void main(String[] args){
+		AccountTest1 a=new AccountTest1(123,"harsh");
+		a.deposit(700);
+		a.withdraw(50);
+		a.display();
+		
+		AccountTest1 b=new AccountTest1(456,"jagadish");
+		b.deposit(560);
+		b.withdraw(400);
+		b.display();
+		
+		AccountTest1 c=new AccountTest1(789,"sam");
+		c.display();
+	}
+}
