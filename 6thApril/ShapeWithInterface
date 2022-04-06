@@ -1,0 +1,36 @@
+package javaAssignments;
+
+public interface Shape {
+	public void Area(int a,int b);
+	public void Perimeter(int a,int b);
+}
+
+class Rect implements Shape{
+	public void Area(int a,int b){
+		System.out.println("Area of Rectangle is: "+(a*b));
+	}
+	public void Perimeter(int a,int b){
+		System.out.println("Perimeter of Rectangle is: "+2*(a+b));
+	}
+}
+
+class Squa implements Shape{
+	public void Area(int a,int b){
+		System.out.println("Area of box is: "+(a*b));
+	}
+	public void Perimeter(int a,int b){
+		System.out.println("Perimeter of box is: "+2*(a+b));
+	}
+}
+
+class ShapeMain{
+	public static void main(String[] args){
+		Rect r=new Rect();
+		r.Area(4, 6);
+		r.Perimeter(4, 6);
+		
+		Squa b =new Squa();
+		b.Area(4, 4);
+		b.Perimeter(4, 4);
+	}
+}
