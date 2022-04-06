@@ -1,0 +1,17 @@
+package javaAssignments;
+import java.util.Scanner;
+
+public class SimpleInterest {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter principle amount in rupees");
+		double p=sc.nextDouble();
+		System.out.println("Enter rate of interest in percent");
+		double r=sc.nextDouble();
+		System.out.println("Enter time period in years");
+		double t=sc.nextDouble();
+		sc.close();
+		double si=(p*r*t)/100;
+		System.out.println("Simple Interest is: "+ si);
+	}
+}
