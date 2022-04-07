@@ -1,0 +1,24 @@
+package collections;
+
+import java.util.List;
+import java.util.LinkedList;
+
+public class col22 {
+	public static void main(String[] args){
+		List<String> l=new LinkedList<>();
+		l.add("Harshitha");
+		l.add("Jagadish");
+		
+		System.out.println("Linkedlist is: "+l);
+		System.out.println("Number of elements in Linkedlist is: "+l.size());
+		
+		List<String> l1=new LinkedList<>();
+		l1.addAll(l);
+		l1.add("is");
+		l1.add("a");
+		l1.add("Student");
+		System.out.println("second Linkedlist is: "+l1);
+		System.out.println("Number of elements in second Linkedlist is: "+l1.size());
+	}
+
+}
