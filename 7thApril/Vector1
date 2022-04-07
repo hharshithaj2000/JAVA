@@ -1,0 +1,25 @@
+package collections;
+
+import java.util.List;
+import java.util.Vector;
+
+public class col3 {
+	public static void main(String[] args){
+		Vector<String> vec=new Vector<>();
+		
+		//add elements to vector
+		vec.add("Har");
+		vec.add("shi");
+		vec.add("tha");
+		System.out.println("Vector is: "+vec);
+		Vector<String> vec1=new Vector<>();
+		vec1.add("Jag");
+		vec1.add("adi");
+		vec1.add("sh");
+		System.out.println("Vector is: "+vec1);
+		
+		//add elements of one vector to another
+		vec1.addAll(vec);
+		System.out.println("Vector is: "+vec1);
+	}
+}
