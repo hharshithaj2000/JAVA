@@ -1,0 +1,23 @@
+package collections;
+
+import java.util.EnumSet;
+
+public class col7 {
+	enum size{
+		FIVE,SIX,SEVEN;
+	}
+
+	public static void main(String[] args) {
+		EnumSet<size> es=EnumSet.allOf(size.class);
+		System.out.println(es);
+		
+		//creates an empty enum of same datatype
+		EnumSet<size> es2=EnumSet.noneOf(size.class);
+		es2.add(size.SEVEN);
+		System.out.println(es2);
+		
+		es2.addAll(es);
+		System.out.println(es2);
+	}
+
+}
