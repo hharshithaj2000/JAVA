@@ -1,0 +1,21 @@
+package collections;
+
+import java.util.List;
+import java.util.Stack;
+
+public class col44 {
+	public static void main(String[] args){
+		Stack<String> st=new Stack<>();
+		st.add("Shiv");
+		st.push("Sam");
+		st.remove("Shiv");
+		st.push("John");
+		st.push("Jake");
+		st.pop();
+		System.out.println(st);
+		
+		st.clear();
+		System.out.println(st);
+		
+	}
+}
