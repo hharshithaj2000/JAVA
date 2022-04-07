@@ -1,0 +1,30 @@
+package collections;
+
+import java.util.Set;
+import java.util.LinkedHashSet;
+
+public class col6 {
+	public static void main(String[] args){
+		LinkedHashSet<Integer> hs=new LinkedHashSet<>();
+		hs.add(2);
+		hs.add(1);
+		hs.add(3);
+		hs.add(4);
+		System.out.println(hs);
+		
+		LinkedHashSet<Integer> hs1=new LinkedHashSet<>();
+		hs1.add(5);
+		hs1.add(3);
+		hs1.add(6);
+		hs1.add(4);
+		System.out.println(hs1);
+		
+		//intersection
+		hs.retainAll(hs1);
+		System.out.println("intersection of the sets is: "+hs);
+				
+		//union
+		hs.addAll(hs1);
+		System.out.println("union of the sets is: "+hs);
+}
+}
