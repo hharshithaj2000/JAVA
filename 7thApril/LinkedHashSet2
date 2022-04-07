@@ -1,0 +1,22 @@
+package collections;
+
+import java.util.Set;
+import java.util.LinkedHashSet;
+
+public class col66 {
+	public static void main(String[] args){
+		LinkedHashSet<String> hashs=new LinkedHashSet<>();
+		hashs.add("This");
+		hashs.add("is");
+		hashs.add("Java");
+		System.out.println(hashs);
+		
+		LinkedHashSet<String> hashs1=new LinkedHashSet<>();
+		hashs1.addAll(hashs);
+		hashs1.add("welcome");
+		System.out.println(hashs1);
+		
+		hashs.retainAll(hashs1);
+		System.out.println("Intersection of linkedhashSets are: "+hashs);
+	}
+}
