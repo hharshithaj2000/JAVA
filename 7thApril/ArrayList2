@@ -1,0 +1,20 @@
+package collections;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class col11 {
+	public static void main(String[] args){
+		ArrayList<String> arr=new ArrayList<>();
+		arr.add("java");
+		arr.add("html");
+		arr.add("css");
+		arr.add("javascript");
+		System.out.println("ArrayList is: "+arr);
+		
+		arr.remove(3);
+		System.out.println("ArrayList is: "+arr);
+		
+		
+	}
+}
