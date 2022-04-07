@@ -1,0 +1,26 @@
+package collections;
+
+import java.util.Set;
+import java.util.HashSet;
+
+public class col55 {
+	public static void main(String[] args){
+		HashSet<Double> hs=new HashSet<>();
+		hs.add(2.3);
+		hs.add(1.4);
+		hs.add(6.4);
+		System.out.println(hs);
+		
+		System.out.println("Hashcode of the hash set is "+hs.hashCode());
+		
+		HashSet<Double> hs1=new HashSet<>();
+		hs1.add(4.2);
+		hs1.add(1.4);
+		hs1.add(6.5);
+		System.out.println(hs1);
+		
+		hs1.addAll(hs);
+		System.out.println("Unioin of sets: "+hs1 );
+	}
+	
+}
