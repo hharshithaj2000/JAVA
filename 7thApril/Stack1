@@ -1,0 +1,25 @@
+package collections;
+
+import java.util.List;
+import java.util.Stack;
+
+public class col4 {
+	public static void main(String[] args){
+		Stack<Integer> stk=new Stack<>();
+		
+		//pull elements to stack
+		stk.push(1);
+		stk.push(2);
+		stk.push(3);
+		stk.push(4);
+		System.out.println("Stack is: "+stk);
+		
+		//pop elements out of stack
+		stk.pop();
+		System.out.println("Stack is: "+stk);
+		
+		//search for elemts in stack
+		int x=stk.search(3);
+		System.out.println("found at "+x);
+	}
+}
