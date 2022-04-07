@@ -1,0 +1,26 @@
+package collections;
+
+import java.util.List;
+import java.util.LinkedList;
+
+public class col2 {
+	public static void main(String[] args){
+		List<Integer> ll=new LinkedList<>();
+		ll.add(2);
+		ll.add(3);
+		ll.add(4);
+		System.out.println("Linkedlist is: "+ll);
+		
+		//get index position of elements
+		int x=ll.indexOf(4);
+		System.out.println("Index of element 4: "+x);
+		
+		//access elements by specifying index 
+		int y=ll.get(2);
+		System.out.println("Element at index 2: "+y);
+		
+		//clear the list
+		ll.clear();
+		System.out.println("Linkedlist is: "+ll);
+	}
+}
