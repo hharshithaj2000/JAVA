@@ -1,0 +1,28 @@
+package collections;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class col88 {
+		public static void main(String[] args){
+			TreeSet<Double> ts=new TreeSet<>();
+			ts.add(4.0);
+			ts.add(3.6);
+			ts.add(6.7);
+			ts.add(5.3);
+			ts.remove(3.6);
+			System.out.println(ts);
+			
+			TreeSet<Double> ts1=new TreeSet<>();
+			ts1.add(4.4);
+			ts1.add(5.6);
+			ts1.add(5.0);
+			ts1.add(5.3);
+			System.out.println(ts1);
+			
+			ts.retainAll(ts1);
+			System.out.println("Union is: "+ts);
+			
+			
+		}
+	}
