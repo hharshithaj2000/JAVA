@@ -1,0 +1,20 @@
+package collections;
+
+import java.util.ArrayDeque;
+
+public class col99 {
+		public static void main(String[] args){
+			ArrayDeque<String> arrde=new ArrayDeque<>();
+			arrde.add("Harshitha");
+			arrde.addFirst("hello");
+			arrde.addLast("Jagadish");
+			arrde.addLast("welcome");
+			arrde.remove("welcome");
+			System.out.println(arrde);
+
+			System.out.println("First element: "+arrde.getFirst());
+			System.out.println("Last element: "+arrde.getLast());
+			
+		}
+	}
+
