@@ -1,21 +1,32 @@
 package collections;
 
-import java.util.List;
-import java.util.Stack;
+import java.util.Set;
+import java.util.HashSet;
 
-public class col44 {
+public class col5 {
 	public static void main(String[] args){
-		Stack<String> st=new Stack<>();
-		st.add("Shiv");
-		st.push("Sam");
-		st.remove("Shiv");
-		st.push("John");
-		st.push("Jake");
-		st.pop();
-		System.out.println(st);
+		HashSet<String> hs=new HashSet<>();
+		hs.add("hello");
+		hs.add("welcome");
+		hs.add("to");
+		hs.add("java");
+		System.out.println(hs);
 		
-		st.clear();
-		System.out.println(st);
+		HashSet<String> hs1=new HashSet<>();
+		hs1.add("hello");
+		hs1.add("welcome");
+		hs1.add("to");
+		hs1.add("html");
+		System.out.println(hs1);
+		
+		//intersection
+		hs.retainAll(hs1);
+		System.out.println("intersection of the sets is: "+hs);
+				
+		//union
+		hs.addAll(hs1);
+		System.out.println("union of the sets is: "+hs);
+		
 		
 	}
 }
