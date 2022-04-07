@@ -1,0 +1,27 @@
+package collections;
+
+import java.util.EnumSet;
+
+public class col77 {
+		enum name{
+			HARSH,SHIV,SAM,SWAT;
+		}
+
+		public static void main(String[] args) {
+			EnumSet<name> name1=EnumSet.allOf(name.class);
+			System.out.println(name1);
+			
+			EnumSet<name> name2=EnumSet.noneOf(name.class);
+			System.out.println(name2);
+			
+			name2.add(name.SAM);
+			System.out.println(name2);
+			
+			name2.addAll(name1);
+			System.out.println(name2);
+			
+			name2.remove(name.SAM);
+			System.out.println(name2);
+		}
+
+	}
