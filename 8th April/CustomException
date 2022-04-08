@@ -1,0 +1,30 @@
+package javaAssignments;
+
+import java.util.Scanner;
+
+public class CustomException extends Exception {
+	public CustomException(String msg){
+		super(msg);
+	}
+}
+
+ class CustomExceptionMain{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number");
+		int x=sc.nextInt();
+		try{
+		if(x<0){
+			throw new CustomException("Number is negative");
+		}
+		else if(x==0){
+			throw new CustomException("Number is zero");
+		}
+		}
+		catch(CustomException e){
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}
+
