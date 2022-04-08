@@ -1,0 +1,38 @@
+package collections;
+
+import java.util.*;
+
+public class Student2 implements Comparable<Student2> {
+	String name;
+	public Student2(String name){
+		this.name=name;
+	}
+	
+	@Override
+	public int compareTo(Student2 obj) {
+		return this.name.length()-obj.name.length();
+	}
+	
+	public String toString() {
+        return this.name ;
+    }
+	
+	
+}
+
+class ComparatorComparable2{
+    public static void main(String[] args) {
+        ArrayList<Student2> stu=new ArrayList<Student2>();
+        stu.add(new Student2("Harsh"));
+        stu.add(new Student2("Sam"));
+        stu.add(new Student2("Kannagi"));
+        stu.add(new Student2("Shivs"));
+        
+
+        Collections.sort(stu);
+        for(int i =0;i<stu.size();i++) {
+            System.out.println(stu.get(i));
+        }
+        
+    }
+}
