@@ -1,0 +1,24 @@
+package io;
+
+import java.io.*;
+
+public class InpByteArr3 {
+	public static void main(String[] args){
+		byte[] arr={1,2,3,4,5,6};
+		try{
+			ByteArrayInputStream inp=new ByteArrayInputStream(arr);
+			System.out.print("Bytes of data available is:");
+			System.out.println(inp.available());
+			for(int i=0;i<arr.length;i++){
+				int data=inp.read();
+				System.out.println(data+" ");
+			}
+			System.out.print("Bytes of data available after reading is:");
+			System.out.println(inp.available());
+			inp.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
