@@ -1,0 +1,30 @@
+package io;
+
+import java.io.*;
+
+public class ipStream4 {
+	public static void main(String[] args){
+		try{
+			FileInputStream data=new FileInputStream("D:\\details.txt");
+			System.out.println("Available bytes of data");
+			System.out.println(data.available());
+			data.read();
+			data.read();
+			System.out.println("After reading 2 bytes of data");
+			System.out.println(data.available());
+			data.skip(10);
+			System.out.println("After skipping 10 bytes of data");
+			System.out.println(data.available());
+			System.out.println("Printing the leftover data");
+			int i=data.read();
+			while(i!=-1){
+				System.out.print((char)i);
+				i=data.read();
+			}
+			data.close();
+			}
+		catch(Exception e){
+			e.getStackTrace();
+		}
+	}
+}
