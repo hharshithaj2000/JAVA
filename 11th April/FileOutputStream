@@ -1,0 +1,21 @@
+package io;
+
+import java.io.*;
+
+public class opStream3 {
+
+	public static void main(String[] args) {
+		String data="Hello everyone,My name is Harshitha and I am learning JAVA";
+		try{
+			FileOutputStream out=new FileOutputStream("D:\\test.txt");
+			byte[] dataArr=data.getBytes();
+			out.write(dataArr);
+			out.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
