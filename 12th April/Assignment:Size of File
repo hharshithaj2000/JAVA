@@ -1,0 +1,20 @@
+package javaAssignments;
+
+import java.io.*;
+
+public class SizeofFile {
+	public static void main(String[] args){
+		try {
+			FileInputStream file=new FileInputStream("D:\\details.txt");
+			System.out.println(file.available()+" bytes");
+			System.out.println((double)file.available()/1000+" kilobytes");
+			System.out.println((double)file.available()/1000000+" megabytes");
+			
+		} 
+		catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		
+	}
+}
