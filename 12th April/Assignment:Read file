@@ -1,0 +1,17 @@
+package javaAssignments;
+
+import java.io.*;
+
+public class ReadFile {
+	public static void main(String[] args){
+		try {
+			FileReader file=new FileReader("D:\\details.txt");
+			BufferedReader br=new BufferedReader(file);
+			System.out.println(br.readLine());
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+}
