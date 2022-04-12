@@ -1,0 +1,19 @@
+package javaAssignments;
+
+import java.io.*;
+
+public class NoofBytes {
+	public static void main(String[] args){
+		String data="This is exmaple for data output stream";
+		try{
+		FileOutputStream file=new FileOutputStream("D://test.txt"); 
+		DataOutputStream dos=new DataOutputStream(file);
+		dos.writeBytes(data);
+		System.out.println("No of bytes written into file: "+dos.size());
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+}
