@@ -1,0 +1,22 @@
+package io;
+
+import java.io.*;
+
+public class stringWriter {
+
+	public static void main(String[] args) {
+		String data="Example for String Writer";
+		try{
+		StringWriter sw=new StringWriter();
+		sw.write(data);
+		System.out.println(sw);
+		sw.close();
+		
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
