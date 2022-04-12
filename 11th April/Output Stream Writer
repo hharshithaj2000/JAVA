@@ -1,0 +1,21 @@
+package io;
+
+import java.io.*;
+
+public class outputStreamWriter {
+
+	public static void main(String[] args) {
+		String data="Example for output stream writer";
+		try{
+			FileOutputStream file=new FileOutputStream("d:\\test.txt");
+			OutputStreamWriter osw=new OutputStreamWriter(file);
+			osw.write(data);
+			osw.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
