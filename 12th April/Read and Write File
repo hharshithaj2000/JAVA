@@ -1,0 +1,26 @@
+package files;
+
+import java.io.*;
+
+public class FileMain12 {
+	public static void main(String[] args){
+		char[] arr=new char[100];
+		String data="I study in BMSIT,Bangalore";
+		try{
+			//reading a file
+			FileReader fr=new FileReader("D://details.txt");
+			fr.read(arr);
+			System.out.println(arr);
+			fr.close();
+			
+			//writing into a file
+			FileWriter fw=new FileWriter("D://details.txt");
+			fw.write(data);
+			fw.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+}
