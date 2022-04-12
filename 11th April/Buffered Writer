@@ -1,0 +1,18 @@
+package io;
+
+import java.io.*;
+
+public class bufferWriter {
+	public static void main(String[] args){
+		String data="example for buffered writer";
+		try{
+		FileWriter file=new FileWriter("d:\\test.txt");
+		BufferedWriter bw=new BufferedWriter(file);
+		bw.write(data);
+		bw.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
