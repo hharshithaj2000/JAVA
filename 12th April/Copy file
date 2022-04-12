@@ -1,0 +1,21 @@
+package files;
+
+import java.io.*;
+
+public class FileMain55 {
+	public static void main(String[] args){
+		byte[] arr=new byte[100];
+		try{
+			FileInputStream sf=new FileInputStream("D:\\Mydetails.txt");
+			FileOutputStream df=new FileOutputStream("D:\\Mydetailscopy.txt");
+			sf.read(arr);
+			df.write(arr);
+			sf.close();
+			df.close();
+			
+		}
+		catch (Exception e) {
+            e.getStackTrace();
+        }
+	}
+}
