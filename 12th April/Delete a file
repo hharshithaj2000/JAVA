@@ -1,0 +1,24 @@
+package files;
+
+import java.io.*;
+
+public class FileMain33 {
+
+	public static void main(String[] args) {
+		try{
+			File file=new File("D://test.txt");
+			boolean flag=file.delete();
+			if(flag==true){
+				System.out.println("File is deleted");
+			}
+			else{
+				System.out.println("File is not deleted");
+			}
+		}
+		catch (Exception e) {
+	            e.getStackTrace();
+	       }
+
+	}
+
+}
