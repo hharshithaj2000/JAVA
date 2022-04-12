@@ -1,0 +1,22 @@
+package io;
+
+import java.io.*;
+
+public class bufferReader {
+
+	public static void main(String[] args) {
+		char[] arr=new char[100];
+		try{
+		FileReader file=new FileReader("D:\\details.txt");
+		BufferedReader br=new BufferedReader(file);
+		br.read(arr);
+        System.out.println(arr);
+        br.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
