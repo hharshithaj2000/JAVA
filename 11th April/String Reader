@@ -1,0 +1,19 @@
+package io;
+
+import java.io.*;
+
+public class stringReader {
+	public static void main(String[] args){
+		String data="Example for string Reader";
+		char[] arr=new char[100];
+		try{
+			StringReader str=new StringReader(data);
+			str.read(arr);
+			System.out.println(arr);
+			str.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
