@@ -1,0 +1,23 @@
+package javaAssignments;
+
+import java.io.*;
+
+public class CopyFile {
+
+	public static void main(String[] args) {
+		byte[] arr=new byte[100];
+		try{
+			FileInputStream from=new FileInputStream("D://from.txt");
+			FileOutputStream to=new FileOutputStream("D://to.txt");
+			from.read(arr);
+			to.write(arr);
+			from.close();
+			to.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
