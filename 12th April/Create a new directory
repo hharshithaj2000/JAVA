@@ -1,0 +1,23 @@
+package files;
+
+import java.io.*;
+
+public class dirMain1 {
+
+	public static void main(String[] args) {
+		try{
+			File dir=new File("D:\\NewDirectory");
+			boolean flag=dir.mkdir();
+			if(flag==true){
+				System.out.println("Directory created");
+			}
+			else{
+				System.out.println("Directory already exists");
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}
