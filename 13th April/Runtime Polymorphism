@@ -1,0 +1,45 @@
+package javaAssignments;
+
+public abstract class Shapes {
+	abstract void getArea(int a);
+	abstract void getPerimeter(int a);
+}
+
+class circle extends Shapes{
+
+	@Override
+	void getArea(int r) {
+		System.out.println("Area of circle is: "+(3.14*r*r));
+	}
+
+	@Override
+	void getPerimeter(int r) {
+		System.out.println("Perimeter of Circle is: "+(2*3.14*r));
+	}
+	
+} 
+
+class square extends Shapes{
+	@Override
+	void getArea(int s) {
+		System.out.println("Area of square is: "+(s*s));
+	}
+
+	@Override
+	void getPerimeter(int s) {
+		System.out.println("Perimeter of Circle is: "+(4*s));
+	}
+	
+} 
+
+class ShapesMain{
+	public static void main(String[] args){
+		circle c=new circle();
+		c.getArea(4);
+		c.getPerimeter(4);
+		
+		square s=new square();
+		s.getArea(5);
+		s.getPerimeter(5);
+	}
+}
