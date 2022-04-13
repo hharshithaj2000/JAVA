@@ -1,0 +1,37 @@
+package junit;
+
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class Annotations {
+	@BeforeClass
+	public static void bc(){
+		System.out.println("bc() runs once before test method");
+	}
+	@Before
+	public void bef(){
+		System.out.println("bef() runs before every test method");
+	}
+	@Test
+	public void test1(){
+		System.out.println("this is test1 method");
+	}
+	@Test
+	public void test2(){
+		System.out.println("this is test2 method");
+	}
+	@Ignore
+	@Test
+	public void test3(){
+		System.out.println("this is test3 method");
+	}
+	@After
+	public void aft(){
+		System.out.println("aft() runs after every test method");
+	}
+	@AfterClass
+	public static void ac(){
+		System.out.println("ac() runs once after test method");
+	}
+	
+}
