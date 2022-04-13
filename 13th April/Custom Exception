@@ -1,0 +1,29 @@
+package javaAssignments;
+
+import java.util.Scanner;
+
+public class CustomExp extends Exception {
+	public CustomExp(String msg){
+		super(msg);
+	}
+}
+
+class CustomExpMain{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter age");
+		int age=sc.nextInt();
+		try{
+		if(age<0){
+			throw new CustomException("Invalid age");
+		}
+		else if(age>0 & age<18){
+			throw new CustomException("Not eligible to vote");
+		}
+		}
+		catch(CustomException e){
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}
