@@ -1,0 +1,47 @@
+package junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+public class Assertions {
+	@Test
+	public void test(){
+		int[] arr={2,5,7};
+		int[] arr1={2,5,7};
+		assertArrayEquals(arr,arr1);
+	}
+	@Test
+	public void test1(){
+		String a="hello";
+		String b="hello";
+		assertEquals(a,b);
+	}
+	@Test
+	public void test2(){
+		Object obj=null;
+		assertNull(obj);
+	}
+	@Test
+	public void test3(){
+		Object obj=15;
+		assertNotNull(obj);
+	}
+	@Test
+    public void test4() {
+        assertTrue(21>4);
+    }
+	@Test
+    public void test5() {
+        Object obj1=new Object();
+        Object obj2=obj1;
+        assertSame(obj1,obj2);
+    }
+	@Test
+    public void testSameNotSame() {
+        Object obj1=new Object();
+        Object obj2=new Object();
+        assertNotSame(obj1,obj2);
+    }
+	
+}
