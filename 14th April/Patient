@@ -1,0 +1,85 @@
+package javaAssignments;
+
+import java.util.*;
+
+public class Patient implements Comparable<Patient>{
+	private int patientid;
+	private String name;
+	private int age;
+	
+	public Patient(int patientid,String name,int age){
+		this.patientid=patientid;
+		this.name=name;
+		this.age=age;
+	}
+
+	public int getPatientid() {
+		return patientid;
+	}
+
+	public void setPatientid(int patientid) {
+		this.patientid = patientid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String toString() {
+        return this.name +" "+ this.age;
+    }
+	
+	public int compareTo(Patient obj){
+		return this.getName().compareTo(obj.getName());
+	}
+	
+	
+}
+
+class SortByAge implements  Comparator<Patient>{
+	public int compare(Patient a, Patient b) {
+		return a.getAge()-b.getAge();
+	}
+	
+}
+
+class TestPatientList{
+	public static void main(String[] args){
+		ArrayList<Patient> arr=new ArrayList<Patient>();
+		arr.add(new Patient(1,"harshitha",21));
+		arr.add(new Patient(2,"zam",35));
+		arr.add(new Patient(3,"tej",27));
+		System.out.println("Sort by Name");
+		Collections.sort(arr);
+		for(Patient p:arr) {
+            System.out.println(p.getPatientid()+" "+p.getName()+" "+p.getAge());
+        }
+		System.out.println("Sort by Age");
+		Collections.sort(arr,new SortByAge());
+		Iterator<Patient> p=arr.iterator();
+		while(p.hasNext()){			
+			System.out.println(p.next());
+		}
+		
+		TreeSet<Patient> ts=new TreeSet<Patient>();
+		ts.add(new Patient(1,"harshitha",21));
+		ts.add(new Patient(2,"zam",35));
+		ts.add(new Patient(3,"tej",27));
+		for(Patient pat:ts) {
+            System.out.println(pat.getPatientid()+" "+pat.getName()+" "+pat.getAge());
+        }
+
+	}
+}
