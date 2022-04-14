@@ -1,0 +1,29 @@
+package javaAssignments;
+
+import java.io.*;
+
+public class TestFile {
+
+	public static void main(String[] args) {
+		try{
+		File dir1=new File("D:\\Badminton");
+		dir1.mkdir();
+		File file1=new File("D:\\Badminton\\singles.txt");
+		file1.createNewFile();
+		File file2=new File("D:\\Badminton\\dubbles.txt");
+		file2.createNewFile();
+		File dir2=new File("D:\\Badminton\\Courts");
+		dir2.mkdir();
+		File file3=new File("D:\\Badminton\\Courts\\smash.dat");
+		file3.createNewFile();
+		File file4=new File("D:\\Badminton\\doubles.txt");
+		file2.renameTo(file4);
+		file1.delete();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}
