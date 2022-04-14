@@ -1,0 +1,50 @@
+package javaAssignments;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public class StudentMarks {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		ArrayList<Integer> arr=new ArrayList<>();
+		System.out.println("Enter number of students");
+		int nos=sc.nextInt();
+		System.out.println("Enter Marks");
+		for(int i=0;i<nos;i++){
+			arr.add(sc.nextInt());
+		}
+		
+		System.out.println("Highest marks");
+		int max=arr.get(0);
+		for(int i=1;i<arr.size();i++){
+			if(arr.get(i)>max){
+				max=arr.get(i);
+			}
+		}
+		System.out.println(max);
+		double sum=0;
+		System.out.println("Average marks");
+		for(int i=0;i<arr.size();i++){
+			sum=sum+arr.get(i);
+		}
+		double avg=sum/arr.size();
+		System.out.println(avg);
+		System.out.println("Marks");
+		for(int i=0;i<arr.size();i++){
+			System.out.print((i+1)+"-"+arr.get(i)+" ");
+		}
+		System.out.println();
+		System.out.println("3rd student Marks");
+		System.out.println(arr.get(2));
+		Collections.sort(arr);
+		System.out.println("Sorted:");
+		for(int i=0;i<arr.size();i++){
+			System.out.print((i+1)+"-"+arr.get(i)+" ");
+		}
+		
+	}
+
+}
