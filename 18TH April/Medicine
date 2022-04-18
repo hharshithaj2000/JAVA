@@ -1,0 +1,43 @@
+package javaAssignments;
+
+public abstract class Medicine {
+	int price;
+	String date;
+	public void getDetails(){
+		System.out.println("Price: "+price+" expiry date: "+date);
+	}
+	public abstract void displayLabel();
+}
+
+class tablet extends Medicine{
+
+	@Override
+	public void displayLabel() {
+		System.out.println("store in a cool dry place");
+		
+	}
+}
+class syrup extends Medicine{
+
+	@Override
+	public void displayLabel() {
+		System.out.println("must be injected");
+		
+	}
+}
+class ointment extends Medicine{
+
+	@Override
+	public void displayLabel() {
+		System.out.println("for external use only");
+		
+	}
+}
+
+class TestMedicine{
+	public static void main(String[] args){
+		tablet t=new tablet();
+		t.displayLabel();
+		t.getDetails();
+	}
+}
